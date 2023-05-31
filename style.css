@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+
+* {margin: 0; padding: 0;}
+
+header {
+    position: absolute;
+    left: 0; top: 0; right: 0; /* w100% */
+    z-index: 100;
+}
+
+.banner {
+    height: 100vh; /* 화면 전체를 차지 */
+}
+
+.slider {
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider .slick-slide {position: relative;}
+
+.slider .slide_left {
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(126, 168, 126);
+    float: left;
+}
+.slider .slide_right {
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(113, 189, 204);
+    float: right;
+}
+
+.slider .slide_left h2 {
+    font-size: 100px;
+    position: absolute;
+    left: -100%; /* 중앙에서부터 200px 떨어짐 */
+    top: calc(50% - 200px);
+    opacity: 0;
+    transition: 1s 0.5s;
+}
+.slider .slick-active .slide_left h2 {
+    left: calc(50% - 500px);
+    opacity: 1;
+}
+
+
+.slider .slide_left .shoes {
+    position: absolute;
+    left: 100%; /* 중앙에서부터 200px 떨어짐 */
+    top: calc(50% + 50px);
+    opacity: 0;
+    transition: 1s 1s;
+} 
+
+
+.slider .slick-active .slide_left .shoes {
+    left: calc(50% - 600px); 
+    opacity: 1;
+}
+
+.slider .slide_left .shoes img {
+    width: 700px;
+}
